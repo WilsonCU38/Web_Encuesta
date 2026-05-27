@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Wilson Chicaiza\\Documents\\UNIANDES\\Web_Encuesta\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{01C971C1-9227-4EC5-B72E-A00DC57FEEE8}|Web_Encuesta\\Web_Encuesta.csproj|c:\\users\\wilson chicaiza\\documents\\uniandes\\web_encuesta\\web_encuesta\\migrations\\20260527212257_inicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01C971C1-9227-4EC5-B72E-A00DC57FEEE8}|Web_Encuesta\\Web_Encuesta.csproj|solutionrelative:web_encuesta\\migrations\\20260527212257_inicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01C971C1-9227-4EC5-B72E-A00DC57FEEE8}|Web_Encuesta\\Web_Encuesta.csproj|c:\\users\\wilson chicaiza\\documents\\uniandes\\web_encuesta\\web_encuesta\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{01C971C1-9227-4EC5-B72E-A00DC57FEEE8}|Web_Encuesta\\Web_Encuesta.csproj|solutionrelative:web_encuesta\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01C971C1-9227-4EC5-B72E-A00DC57FEEE8}|Web_Encuesta\\Web_Encuesta.csproj|c:\\users\\wilson chicaiza\\documents\\uniandes\\web_encuesta\\web_encuesta\\models\\respuesta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01C971C1-9227-4EC5-B72E-A00DC57FEEE8}|Web_Encuesta\\Web_Encuesta.csproj|solutionrelative:web_encuesta\\models\\respuesta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01C971C1-9227-4EC5-B72E-A00DC57FEEE8}|Web_Encuesta\\Web_Encuesta.csproj|c:\\users\\wilson chicaiza\\documents\\uniandes\\web_encuesta\\web_encuesta\\models\\pregunta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01C971C1-9227-4EC5-B72E-A00DC57FEEE8}|Web_Encuesta\\Web_Encuesta.csproj|solutionrelative:web_encuesta\\models\\pregunta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01C971C1-9227-4EC5-B72E-A00DC57FEEE8}|Web_Encuesta\\Web_Encuesta.csproj|c:\\users\\wilson chicaiza\\documents\\uniandes\\web_encuesta\\web_encuesta\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01C971C1-9227-4EC5-B72E-A00DC57FEEE8}|Web_Encuesta\\Web_Encuesta.csproj|solutionrelative:web_encuesta\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01C971C1-9227-4EC5-B72E-A00DC57FEEE8}|Web_Encuesta\\Web_Encuesta.csproj|c:\\users\\wilson chicaiza\\documents\\uniandes\\web_encuesta\\web_encuesta\\models\\encuestadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01C971C1-9227-4EC5-B72E-A00DC57FEEE8}|Web_Encuesta\\Web_Encuesta.csproj|solutionrelative:web_encuesta\\models\\encuestadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01C971C1-9227-4EC5-B72E-A00DC57FEEE8}|Web_Encuesta\\Web_Encuesta.csproj|c:\\users\\wilson chicaiza\\documents\\uniandes\\web_encuesta\\web_encuesta\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01C971C1-9227-4EC5-B72E-A00DC57FEEE8}|Web_Encuesta\\Web_Encuesta.csproj|solutionrelative:web_encuesta\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20260527212257_inicio.cs",
+              "DocumentMoniker": "C:\\Users\\Wilson Chicaiza\\Documents\\UNIANDES\\Web_Encuesta\\Web_Encuesta\\Migrations\\20260527212257_inicio.cs",
+              "RelativeDocumentMoniker": "Web_Encuesta\\Migrations\\20260527212257_inicio.cs",
+              "ToolTip": "C:\\Users\\Wilson Chicaiza\\Documents\\UNIANDES\\Web_Encuesta\\Web_Encuesta\\Migrations\\20260527212257_inicio.cs",
+              "RelativeToolTip": "Web_Encuesta\\Migrations\\20260527212257_inicio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T21:35:30.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Wilson Chicaiza\\Documents\\UNIANDES\\Web_Encuesta\\Web_Encuesta\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Web_Encuesta\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\Wilson Chicaiza\\Documents\\UNIANDES\\Web_Encuesta\\Web_Encuesta\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Web_Encuesta\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T21:35:26.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Respuesta.cs",
+              "DocumentMoniker": "C:\\Users\\Wilson Chicaiza\\Documents\\UNIANDES\\Web_Encuesta\\Web_Encuesta\\Models\\Respuesta.cs",
+              "RelativeDocumentMoniker": "Web_Encuesta\\Models\\Respuesta.cs",
+              "ToolTip": "C:\\Users\\Wilson Chicaiza\\Documents\\UNIANDES\\Web_Encuesta\\Web_Encuesta\\Models\\Respuesta.cs",
+              "RelativeToolTip": "Web_Encuesta\\Models\\Respuesta.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T21:09:43.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Pregunta.cs",
+              "DocumentMoniker": "C:\\Users\\Wilson Chicaiza\\Documents\\UNIANDES\\Web_Encuesta\\Web_Encuesta\\Models\\Pregunta.cs",
+              "RelativeDocumentMoniker": "Web_Encuesta\\Models\\Pregunta.cs",
+              "ToolTip": "C:\\Users\\Wilson Chicaiza\\Documents\\UNIANDES\\Web_Encuesta\\Web_Encuesta\\Models\\Pregunta.cs",
+              "RelativeToolTip": "Web_Encuesta\\Models\\Pregunta.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T21:07:27.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Wilson Chicaiza\\Documents\\UNIANDES\\Web_Encuesta\\Web_Encuesta\\appsettings.json",
+              "RelativeDocumentMoniker": "Web_Encuesta\\appsettings.json",
+              "ToolTip": "C:\\Users\\Wilson Chicaiza\\Documents\\UNIANDES\\Web_Encuesta\\Web_Encuesta\\appsettings.json",
+              "RelativeToolTip": "Web_Encuesta\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-27T18:12:13.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Wilson Chicaiza\\Documents\\UNIANDES\\Web_Encuesta\\Web_Encuesta\\Program.cs",
+              "RelativeDocumentMoniker": "Web_Encuesta\\Program.cs",
+              "ToolTip": "C:\\Users\\Wilson Chicaiza\\Documents\\UNIANDES\\Web_Encuesta\\Web_Encuesta\\Program.cs",
+              "RelativeToolTip": "Web_Encuesta\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T18:09:01.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EncuestaDBContext.cs",
+              "DocumentMoniker": "C:\\Users\\Wilson Chicaiza\\Documents\\UNIANDES\\Web_Encuesta\\Web_Encuesta\\Models\\EncuestaDBContext.cs",
+              "RelativeDocumentMoniker": "Web_Encuesta\\Models\\EncuestaDBContext.cs",
+              "ToolTip": "C:\\Users\\Wilson Chicaiza\\Documents\\UNIANDES\\Web_Encuesta\\Web_Encuesta\\Models\\EncuestaDBContext.cs",
+              "RelativeToolTip": "Web_Encuesta\\Models\\EncuestaDBContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T18:02:03.416Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
