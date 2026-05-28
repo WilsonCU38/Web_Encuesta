@@ -1,0 +1,85 @@
+
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.EntityFrameworkCore;
+using Web_Encuesta.Migrations;
+using Web_Encuesta.Models;
+using Web_Encuesta.Models.ViewModel;
+
+public class RespuestasController : Controller
+{
+    private readonly EncuestaDBContext _context;
+
+    public RespuestasController(EncuestaDBContext context)
+    {
+        _context = context;
+    }
+
+    // GET: RESPUESTAS
+    public async Task<IActionResult> Index()    
+    {
+        var preguntas = await _context.Preguntas.OrderBy(p => p.Orden)
+            .Select(p => new PreguntasViewModel
+            {
+                PreguntasId = p.Id,
+                Descripcion = p.Descripcion,
+                Enunciado = p.Enunciado,
+                Respuesta = string.Empty
+            }).ToListAsync();
+
+        var encuesta = new EncuestaViewModel
+        {
+            ListaPreguntas = preguntas,
+        };
+
+        return View(encuesta);
+    }
+
+    // GET: RESPUESTAS/Create
+    public IActionResult Create()
+    {
+        return View();
+    }
+
+    // POST: RESPUESTAS/Create
+    // To protect from overposting attacks, enable the specific properties you want to bind to.
+    // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Create(EncuestaViewModel encuesta)
+    {
+        if (encuesta == null || encuesta.ListaPreguntas == null || encuesta.ListaPreguntas.Any())
+        {
+            ModelState.AddModelError("", "No se recibieron respuestas");
+
+            return View("Index", encuesta);
+        }
+
+        var respuestas = encuesta.ListaPreguntas
+            .Where(p => !string.IsNullOrWhiteSpace(p.Respuesta))
+            .Select(p => new Respuesta
+            {
+                FechaRegistro = DateTime.Now,
+                IdPregunta = p.PreguntasId,
+                Respuestas = p.Respuesta
+            }).ToList();
+
+        if (!respuestas.Any())
+        {
+            ModelState.AddModelError("", "Debe responder las preguntas");
+
+            return View("Index", encuesta);
+        }
+
+        _context.Respuestas.AddRange(respuestas);
+
+        await _context.SaveChangesAsync();
+
+        return RedirectToAction("Gracias");
+    }
+
+    public IActionResult Gracias()
+    {
+        return View();
+    }
+}

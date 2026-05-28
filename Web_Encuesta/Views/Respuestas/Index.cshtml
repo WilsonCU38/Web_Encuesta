@@ -1,0 +1,37 @@
+@model Web_Encuesta.Models.ViewModel.EncuestaViewModel
+
+@{
+    ViewData["Title"] = "Encuesta";
+}
+
+<h1>Encuesta</h1>
+
+<form asp-action="Create" asp-controller="Respuesta" method="post">
+    @Html.AntiForgeryToken()
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    @for (int i = 0; i < Model.ListaPreguntas.Count(); i++)
+        {
+            <div class="mb-4">
+                <input type="hidden" asp-for="ListaPreguntas[i].PreguntasId" />
+                <input type="hidden" asp-for="ListaPreguntas[i].Enunciado" />
+                <input type="hidden" asp-for="ListaPreguntas[i].Descripcion" />
+
+                <label class="form-control">
+                    <strong>@Model.ListaPreguntas[i].Enunciado</strong>
+                </label>
+
+                @if (!string.IsNullOrEmpty(Model.ListaPreguntas[i].Descripcion))
+                {
+                    <p class="text-muted">@Model.ListaPreguntas[i].Descripcion</p>
+                }
+
+                <input asp-for="ListaPreguntas[i].Respuesta" class="form-control" />
+            </div>
+        }
+
+        <button type="submit" class="btn btn-outline-primary">
+            Enviar Respuesta
+        </button>
+</form>

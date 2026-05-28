@@ -223,3 +223,4 @@ C:\Users\Wilson Chicaiza\Documents\UNIANDES\Web_Encuesta\Web_Encuesta\obj\Debug\
 C:\Users\Wilson Chicaiza\Documents\UNIANDES\Web_Encuesta\Web_Encuesta\obj\Debug\net10.0\Web_Encuesta.pdb
 C:\Users\Wilson Chicaiza\Documents\UNIANDES\Web_Encuesta\Web_Encuesta\obj\Debug\net10.0\Web_Encuesta.genruntimeconfig.cache
 C:\Users\Wilson Chicaiza\Documents\UNIANDES\Web_Encuesta\Web_Encuesta\obj\Debug\net10.0\ref\Web_Encuesta.dll
+C:\Users\Wilson Chicaiza\Documents\UNIANDES\Web_Encuesta\Web_Encuesta\obj\Debug\net10.0\Web_Encuesta.sourcelink.json
