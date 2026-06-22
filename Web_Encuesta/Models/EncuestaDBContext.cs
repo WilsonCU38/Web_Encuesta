@@ -12,5 +12,7 @@ namespace Web_Encuesta.Models
         public DbSet<Pregunta> Preguntas { get; set; }
 
         public DbSet<Respuesta> Respuestas { get; set; }
+
+        public DbSet<Cliente> Clientes {  get; set; }
     }
 }
