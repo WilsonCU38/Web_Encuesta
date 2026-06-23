@@ -7,6 +7,17 @@ var connection = builder.Configuration.GetConnectionString("connection");
 
 builder.Services.AddDbContext<EncuestaDBContext>(options => options.UseSqlServer(connection));
 
+builder.Services.AddCors(
+    (opciones) =>
+    {
+        opciones.AddPolicy("todos", politica =>
+        {
+            politica.AllowAnyHeader()
+            .AllowAnyOrigin()
+            .AllowAnyMethod();
+        });
+    });
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
@@ -20,6 +31,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+app.UseCors("todos");
 app.UseHttpsRedirection();
 app.UseRouting();
 
