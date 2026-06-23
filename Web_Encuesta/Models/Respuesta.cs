@@ -4,11 +4,11 @@
     {
         public int Id { get; set; }
 
-        public string Respuestas { get; set; }
+        public string Detalle { get; set; }
 
-        public int IdPregunta { get; set; }
+        public int PreguntaId { get; set; }
 
-        public Pregunta Preguntas { get; set; }
+        public Pregunta Pregunta { get; set; }
 
         public DateTime FechaRegistro { get; set; }
     }

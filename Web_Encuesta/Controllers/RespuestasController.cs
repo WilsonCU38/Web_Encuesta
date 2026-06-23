@@ -18,13 +18,13 @@ public class RespuestasController : Controller
     // GET: RESPUESTAS
     public async Task<IActionResult> Index()    
     {
-        var preguntas = await _context.Preguntas.OrderBy(p => p.Orden)
+        var preguntas = await _context.Pregunta.OrderBy(p => p.Orden)
             .Select(p => new PreguntasViewModel
             {
-                PreguntasId = p.Id,
+                PreguntaId = p.Id,
                 Descripcion = p.Descripcion,
                 Enunciado = p.Enunciado,
-                Respuesta = string.Empty
+                Detalle = string.Empty
             }).ToListAsync();
 
         var encuesta = new EncuestaViewModel
@@ -48,7 +48,7 @@ public class RespuestasController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create(EncuestaViewModel encuesta)
     {
-        if (encuesta == null || encuesta.ListaPreguntas == null || encuesta.ListaPreguntas.Any())
+        if (encuesta == null || encuesta.ListaPreguntas == null || !encuesta.ListaPreguntas.Any())
         {
             ModelState.AddModelError("", "No se recibieron respuestas");
 
@@ -56,12 +56,12 @@ public class RespuestasController : Controller
         }
 
         var respuestas = encuesta.ListaPreguntas
-            .Where(p => !string.IsNullOrWhiteSpace(p.Respuesta))
+            .Where(p => !string.IsNullOrWhiteSpace(p.Detalle))
             .Select(p => new Respuesta
             {
+                Detalle = p.Detalle,
+                PreguntaId = p.PreguntaId,
                 FechaRegistro = DateTime.Now,
-                IdPregunta = p.PreguntasId,
-                Respuestas = p.Respuesta
             }).ToList();
 
         if (!respuestas.Any())
@@ -71,7 +71,7 @@ public class RespuestasController : Controller
             return View("Index", encuesta);
         }
 
-        _context.Respuestas.AddRange(respuestas);
+        _context.Respuesta.AddRange(respuestas);
 
         await _context.SaveChangesAsync();
 

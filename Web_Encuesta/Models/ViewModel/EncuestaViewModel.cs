@@ -7,12 +7,12 @@
 
     public class PreguntasViewModel
     {
-        public int PreguntasId { get; set; }
+        public int PreguntaId { get; set; }
 
         public string Enunciado { get; set; }
 
         public string Descripcion { get; set; }
 
-        public string Respuesta { get; set; }
+        public string Detalle { get; set; }
     }
 }

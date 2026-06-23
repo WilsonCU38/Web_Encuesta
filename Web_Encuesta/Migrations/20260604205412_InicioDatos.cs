@@ -6,13 +6,13 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Web_Encuesta.Migrations
 {
     /// <inheritdoc />
-    public partial class inicio : Migration
+    public partial class InicioDatos : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Preguntas",
+                name: "Pregunta",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -24,45 +24,44 @@ namespace Web_Encuesta.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Preguntas", x => x.Id);
+                    table.PrimaryKey("PK_Pregunta", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Respuestas",
+                name: "Respuesta",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Respuestas = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IdPregunta = table.Column<int>(type: "int", nullable: false),
-                    PreguntasId = table.Column<int>(type: "int", nullable: false),
+                    Detalle = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PreguntaId = table.Column<int>(type: "int", nullable: false),
                     FechaRegistro = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Respuestas", x => x.Id);
+                    table.PrimaryKey("PK_Respuesta", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Respuestas_Preguntas_PreguntasId",
-                        column: x => x.PreguntasId,
-                        principalTable: "Preguntas",
+                        name: "FK_Respuesta_Pregunta_PreguntaId",
+                        column: x => x.PreguntaId,
+                        principalTable: "Pregunta",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Respuestas_PreguntasId",
-                table: "Respuestas",
-                column: "PreguntasId");
+                name: "IX_Respuesta_PreguntaId",
+                table: "Respuesta",
+                column: "PreguntaId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Respuestas");
+                name: "Respuesta");
 
             migrationBuilder.DropTable(
-                name: "Preguntas");
+                name: "Pregunta");
         }
     }
 }

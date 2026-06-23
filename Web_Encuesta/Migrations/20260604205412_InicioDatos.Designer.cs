@@ -12,8 +12,8 @@ using Web_Encuesta.Models;
 namespace Web_Encuesta.Migrations
 {
     [DbContext(typeof(EncuestaDBContext))]
-    [Migration("20260527212257_inicio")]
-    partial class inicio
+    [Migration("20260604205412_InicioDatos")]
+    partial class InicioDatos
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -49,7 +49,7 @@ namespace Web_Encuesta.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Preguntas");
+                    b.ToTable("Pregunta");
                 });
 
             modelBuilder.Entity("Web_Encuesta.Models.Respuesta", b =>
@@ -60,35 +60,32 @@ namespace Web_Encuesta.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("FechaRegistro")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("IdPregunta")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PreguntasId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Respuestas")
+                    b.Property<string>("Detalle")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("FechaRegistro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("PreguntaId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("PreguntasId");
+                    b.HasIndex("PreguntaId");
 
-                    b.ToTable("Respuestas");
+                    b.ToTable("Respuesta");
                 });
 
             modelBuilder.Entity("Web_Encuesta.Models.Respuesta", b =>
                 {
-                    b.HasOne("Web_Encuesta.Models.Pregunta", "Preguntas")
+                    b.HasOne("Web_Encuesta.Models.Pregunta", "Pregunta")
                         .WithMany()
-                        .HasForeignKey("PreguntasId")
+                        .HasForeignKey("PreguntaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Preguntas");
+                    b.Navigation("Pregunta");
                 });
 #pragma warning restore 612, 618
         }
