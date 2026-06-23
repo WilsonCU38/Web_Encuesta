@@ -12,13 +12,8 @@ using Web_Encuesta.Models;
 namespace Web_Encuesta.Migrations
 {
     [DbContext(typeof(EncuestaDBContext))]
-<<<<<<<< HEAD:Web_Encuesta/Migrations/20260604205412_InicioDatos.Designer.cs
-    [Migration("20260604205412_InicioDatos")]
-    partial class InicioDatos
-========
-    [Migration("20260622024255_inicio")]
+    [Migration("20260623180825_inicio")]
     partial class inicio
->>>>>>>> c2bc31d9604584e13a41827c4c1f9c80084d3357:Web_Encuesta/Migrations/20260622024255_inicio.Designer.cs
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -103,7 +98,7 @@ namespace Web_Encuesta.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Pregunta");
+                    b.ToTable("Preguntas");
                 });
 
             modelBuilder.Entity("Web_Encuesta.Models.Respuesta", b =>
@@ -128,7 +123,7 @@ namespace Web_Encuesta.Migrations
 
                     b.HasIndex("PreguntaId");
 
-                    b.ToTable("Respuesta");
+                    b.ToTable("Respuestas");
                 });
 
             modelBuilder.Entity("Web_Encuesta.Models.Respuesta", b =>

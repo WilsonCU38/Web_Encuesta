@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.EntityFrameworkCore;
-using Web_Encuesta.Migrations;
+//using Web_Encuesta.Migrations;
 using Web_Encuesta.Models;
 using Web_Encuesta.Models.ViewModel;
 
@@ -18,7 +18,7 @@ public class RespuestasController : Controller
     // GET: RESPUESTAS
     public async Task<IActionResult> Index()    
     {
-        var preguntas = await _context.Pregunta.OrderBy(p => p.Orden)
+        var preguntas = await _context.Preguntas.OrderBy(p => p.Orden)
             .Select(p => new PreguntasViewModel
             {
                 PreguntaId = p.Id,
@@ -71,7 +71,7 @@ public class RespuestasController : Controller
             return View("Index", encuesta);
         }
 
-        _context.Respuesta.AddRange(respuestas);
+        _context.Respuestas.AddRange(respuestas);
 
         await _context.SaveChangesAsync();
 

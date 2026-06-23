@@ -3091,23 +3091,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HP\\.nuget\\packages\\": {},
+    "C:\\Users\\Wilson Chicaiza\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Uniandes\\Sexto Semestre\\Aplicaciones Web\\Web_Encuesta\\Web_Encuesta\\Web_Encuesta.csproj",
+      "projectUniqueName": "C:\\Users\\Wilson Chicaiza\\Documents\\UNIANDES\\Web_Encuesta\\Web_Encuesta\\Web_Encuesta.csproj",
       "projectName": "Web_Encuesta",
-      "projectPath": "D:\\Uniandes\\Sexto Semestre\\Aplicaciones Web\\Web_Encuesta\\Web_Encuesta\\Web_Encuesta.csproj",
-      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "D:\\Uniandes\\Sexto Semestre\\Aplicaciones Web\\Web_Encuesta\\Web_Encuesta\\obj\\",
+      "projectPath": "C:\\Users\\Wilson Chicaiza\\Documents\\UNIANDES\\Web_Encuesta\\Web_Encuesta\\Web_Encuesta.csproj",
+      "packagesPath": "C:\\Users\\Wilson Chicaiza\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Wilson Chicaiza\\Documents\\UNIANDES\\Web_Encuesta\\Web_Encuesta\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Wilson Chicaiza\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

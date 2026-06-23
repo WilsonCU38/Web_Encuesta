@@ -95,7 +95,7 @@ namespace Web_Encuesta.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Pregunta");
+                    b.ToTable("Preguntas");
                 });
 
             modelBuilder.Entity("Web_Encuesta.Models.Respuesta", b =>
@@ -120,7 +120,7 @@ namespace Web_Encuesta.Migrations
 
                     b.HasIndex("PreguntaId");
 
-                    b.ToTable("Respuesta");
+                    b.ToTable("Respuestas");
                 });
 
             modelBuilder.Entity("Web_Encuesta.Models.Respuesta", b =>

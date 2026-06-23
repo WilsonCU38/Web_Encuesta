@@ -20,69 +20,69 @@ build_property.TargetFrameworkVersion = v10.0
 build_property.EntryPointFilePath = 
 build_property.RootNamespace = Web_Encuesta
 build_property.RootNamespace = Web_Encuesta
-build_property.ProjectDir = D:\Uniandes\Sexto Semestre\Aplicaciones Web\Web_Encuesta\Web_Encuesta\
+build_property.ProjectDir = C:\Users\Wilson Chicaiza\Documents\UNIANDES\Web_Encuesta\Web_Encuesta\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 10.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Uniandes\Sexto Semestre\Aplicaciones Web\Web_Encuesta\Web_Encuesta
+build_property.MSBuildProjectDirectory = C:\Users\Wilson Chicaiza\Documents\UNIANDES\Web_Encuesta\Web_Encuesta
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[D:/Uniandes/Sexto Semestre/Aplicaciones Web/Web_Encuesta/Web_Encuesta/Views/Home/Index.cshtml]
+[C:/Users/Wilson Chicaiza/Documents/UNIANDES/Web_Encuesta/Web_Encuesta/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Uniandes/Sexto Semestre/Aplicaciones Web/Web_Encuesta/Web_Encuesta/Views/Home/Privacy.cshtml]
+[C:/Users/Wilson Chicaiza/Documents/UNIANDES/Web_Encuesta/Web_Encuesta/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Uniandes/Sexto Semestre/Aplicaciones Web/Web_Encuesta/Web_Encuesta/Views/Preguntas/Create.cshtml]
+[C:/Users/Wilson Chicaiza/Documents/UNIANDES/Web_Encuesta/Web_Encuesta/Views/Preguntas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlZ3VudGFzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Uniandes/Sexto Semestre/Aplicaciones Web/Web_Encuesta/Web_Encuesta/Views/Preguntas/Delete.cshtml]
+[C:/Users/Wilson Chicaiza/Documents/UNIANDES/Web_Encuesta/Web_Encuesta/Views/Preguntas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlZ3VudGFzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Uniandes/Sexto Semestre/Aplicaciones Web/Web_Encuesta/Web_Encuesta/Views/Preguntas/Details.cshtml]
+[C:/Users/Wilson Chicaiza/Documents/UNIANDES/Web_Encuesta/Web_Encuesta/Views/Preguntas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlZ3VudGFzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Uniandes/Sexto Semestre/Aplicaciones Web/Web_Encuesta/Web_Encuesta/Views/Preguntas/Edit.cshtml]
+[C:/Users/Wilson Chicaiza/Documents/UNIANDES/Web_Encuesta/Web_Encuesta/Views/Preguntas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlZ3VudGFzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Uniandes/Sexto Semestre/Aplicaciones Web/Web_Encuesta/Web_Encuesta/Views/Preguntas/Index.cshtml]
+[C:/Users/Wilson Chicaiza/Documents/UNIANDES/Web_Encuesta/Web_Encuesta/Views/Preguntas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlZ3VudGFzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Uniandes/Sexto Semestre/Aplicaciones Web/Web_Encuesta/Web_Encuesta/Views/Respuestas/Gracias.cshtml]
+[C:/Users/Wilson Chicaiza/Documents/UNIANDES/Web_Encuesta/Web_Encuesta/Views/Respuestas/Gracias.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzcHVlc3Rhc1xHcmFjaWFzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Uniandes/Sexto Semestre/Aplicaciones Web/Web_Encuesta/Web_Encuesta/Views/Respuestas/Index.cshtml]
+[C:/Users/Wilson Chicaiza/Documents/UNIANDES/Web_Encuesta/Web_Encuesta/Views/Respuestas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzcHVlc3Rhc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Uniandes/Sexto Semestre/Aplicaciones Web/Web_Encuesta/Web_Encuesta/Views/Shared/Error.cshtml]
+[C:/Users/Wilson Chicaiza/Documents/UNIANDES/Web_Encuesta/Web_Encuesta/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Uniandes/Sexto Semestre/Aplicaciones Web/Web_Encuesta/Web_Encuesta/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Wilson Chicaiza/Documents/UNIANDES/Web_Encuesta/Web_Encuesta/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Uniandes/Sexto Semestre/Aplicaciones Web/Web_Encuesta/Web_Encuesta/Views/_ViewImports.cshtml]
+[C:/Users/Wilson Chicaiza/Documents/UNIANDES/Web_Encuesta/Web_Encuesta/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Uniandes/Sexto Semestre/Aplicaciones Web/Web_Encuesta/Web_Encuesta/Views/_ViewStart.cshtml]
+[C:/Users/Wilson Chicaiza/Documents/UNIANDES/Web_Encuesta/Web_Encuesta/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Uniandes/Sexto Semestre/Aplicaciones Web/Web_Encuesta/Web_Encuesta/Views/Shared/_Layout.cshtml]
+[C:/Users/Wilson Chicaiza/Documents/UNIANDES/Web_Encuesta/Web_Encuesta/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-w45swj38ac

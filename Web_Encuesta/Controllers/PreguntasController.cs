@@ -15,7 +15,7 @@ public class PreguntasController : Controller
     // GET: PREGUNTAS
     public async Task<IActionResult> Index()    
     {
-        return View(await _context.Pregunta.ToListAsync());
+        return View(await _context.Preguntas.ToListAsync());
     }
 
     // GET: PREGUNTAS/Details/5
@@ -26,7 +26,7 @@ public class PreguntasController : Controller
             return NotFound();
         }
 
-        var pregunta = await _context.Pregunta
+        var pregunta = await _context.Preguntas
             .FirstOrDefaultAsync(m => m.Id == id);
         if (pregunta == null)
         {
@@ -66,7 +66,7 @@ public class PreguntasController : Controller
             return NotFound();
         }
 
-        var pregunta = await _context.Pregunta.FindAsync(id);
+        var pregunta = await _context.Preguntas.FindAsync(id);
         if (pregunta == null)
         {
             return NotFound();
@@ -117,7 +117,7 @@ public class PreguntasController : Controller
             return NotFound();
         }
 
-        var pregunta = await _context.Pregunta
+        var pregunta = await _context.Preguntas
             .FirstOrDefaultAsync(m => m.Id == id);
         if (pregunta == null)
         {
@@ -132,10 +132,10 @@ public class PreguntasController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> DeleteConfirmed(int? id)
     {
-        var pregunta = await _context.Pregunta.FindAsync(id);
+        var pregunta = await _context.Preguntas.FindAsync(id);
         if (pregunta != null)
         {
-            _context.Pregunta.Remove(pregunta);
+            _context.Preguntas.Remove(pregunta);
         }
 
         await _context.SaveChangesAsync();
@@ -144,6 +144,6 @@ public class PreguntasController : Controller
 
     private bool PreguntaExists(int? id)
     {
-        return _context.Pregunta.Any(e => e.Id == id);
+        return _context.Preguntas.Any(e => e.Id == id);
     }
 }

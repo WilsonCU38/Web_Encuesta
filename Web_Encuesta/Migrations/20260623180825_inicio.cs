@@ -6,15 +6,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Web_Encuesta.Migrations
 {
     /// <inheritdoc />
-    public partial class InicioDatos : Migration
+    public partial class inicio : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-<<<<<<<< HEAD:Web_Encuesta/Migrations/20260604205412_InicioDatos.cs
-                name: "Pregunta",
-========
                 name: "Clientes",
                 columns: table => new
                 {
@@ -36,7 +33,6 @@ namespace Web_Encuesta.Migrations
 
             migrationBuilder.CreateTable(
                 name: "Preguntas",
->>>>>>>> c2bc31d9604584e13a41827c4c1f9c80084d3357:Web_Encuesta/Migrations/20260622024255_inicio.cs
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -48,11 +44,11 @@ namespace Web_Encuesta.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Pregunta", x => x.Id);
+                    table.PrimaryKey("PK_Preguntas", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Respuesta",
+                name: "Respuestas",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -63,18 +59,18 @@ namespace Web_Encuesta.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Respuesta", x => x.Id);
+                    table.PrimaryKey("PK_Respuestas", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Respuesta_Pregunta_PreguntaId",
+                        name: "FK_Respuestas_Preguntas_PreguntaId",
                         column: x => x.PreguntaId,
-                        principalTable: "Pregunta",
+                        principalTable: "Preguntas",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Respuesta_PreguntaId",
-                table: "Respuesta",
+                name: "IX_Respuestas_PreguntaId",
+                table: "Respuestas",
                 column: "PreguntaId");
         }
 
@@ -82,17 +78,13 @@ namespace Web_Encuesta.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-<<<<<<<< HEAD:Web_Encuesta/Migrations/20260604205412_InicioDatos.cs
-                name: "Respuesta");
-========
                 name: "Clientes");
 
             migrationBuilder.DropTable(
                 name: "Respuestas");
->>>>>>>> c2bc31d9604584e13a41827c4c1f9c80084d3357:Web_Encuesta/Migrations/20260622024255_inicio.cs
 
             migrationBuilder.DropTable(
-                name: "Pregunta");
+                name: "Preguntas");
         }
     }
 }
