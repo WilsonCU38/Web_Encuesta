@@ -1,10 +1,8 @@
 
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-//using Web_Encuesta.Migrations;
 using Web_Encuesta.Models;
-using Web_Encuesta.Models.ViewModel;
 
 public class RespuestasController : Controller
 {
@@ -18,26 +16,36 @@ public class RespuestasController : Controller
     // GET: RESPUESTAS
     public async Task<IActionResult> Index()    
     {
-        var preguntas = await _context.Preguntas.OrderBy(p => p.Orden)
-            .Select(p => new PreguntasViewModel
-            {
-                PreguntaId = p.Id,
-                Descripcion = p.Descripcion,
-                Enunciado = p.Enunciado,
-                Detalle = string.Empty
-            }).ToListAsync();
+        return View(await _context.Respuestas.Include(r => r.Pregunta).ToListAsync());
+    }
 
-        var encuesta = new EncuestaViewModel
+    // GET: RESPUESTAS/Details/5
+    public async Task<IActionResult> Details(int? id)
+    {
+        if (id == null)
         {
-            ListaPreguntas = preguntas,
-        };
+            return NotFound();
+        }
 
-        return View(encuesta);
+        var respuesta = await _context.Respuestas
+            .Include(r => r.Pregunta)
+            .FirstOrDefaultAsync(r => r.Id == id);
+        if (respuesta == null)
+        {
+            return NotFound();
+        }
+
+        return View(respuesta);
     }
 
     // GET: RESPUESTAS/Create
     public IActionResult Create()
     {
+        ViewBag.Preguntas = new SelectList(
+                _context.Preguntas.OrderBy(p => p.Orden),
+                "Id",
+                "Descripcion");
+
         return View();
     }
 
@@ -46,40 +54,118 @@ public class RespuestasController : Controller
     // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create(EncuestaViewModel encuesta)
+    public async Task<IActionResult> Create([Bind("Id,Detalle,PreguntaId,FechaRegistro")] Respuesta respuesta)
     {
-        if (encuesta == null || encuesta.ListaPreguntas == null || !encuesta.ListaPreguntas.Any())
+        if (ModelState.IsValid)
         {
-            ModelState.AddModelError("", "No se recibieron respuestas");
+            respuesta.FechaRegistro = DateTime.Now;
 
-            return View("Index", encuesta);
+            _context.Add(respuesta);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
         }
 
-        var respuestas = encuesta.ListaPreguntas
-            .Where(p => !string.IsNullOrWhiteSpace(p.Detalle))
-            .Select(p => new Respuesta
-            {
-                Detalle = p.Detalle,
-                PreguntaId = p.PreguntaId,
-                FechaRegistro = DateTime.Now,
-            }).ToList();
+        ViewBag.Preguntas = new SelectList(
+                _context.Preguntas.OrderBy(p => p.Orden),
+                "Id",
+                "Descripcion",
+                respuesta.PreguntaId);
 
-        if (!respuestas.Any())
-        {
-            ModelState.AddModelError("", "Debe responder las preguntas");
-
-            return View("Index", encuesta);
-        }
-
-        _context.Respuestas.AddRange(respuestas);
-
-        await _context.SaveChangesAsync();
-
-        return RedirectToAction("Gracias");
+        return View(respuesta);
     }
 
-    public IActionResult Gracias()
+    // GET: RESPUESTAS/Edit/5
+    public async Task<IActionResult> Edit(int? id)
     {
-        return View();
+        if (id == null)
+        {
+            return NotFound();
+        }
+
+        var respuesta = await _context.Respuestas
+        .Include(r => r.Pregunta)
+        .FirstOrDefaultAsync(r => r.Id == id);
+
+        if (respuesta == null)
+        {
+            return NotFound();
+        }
+        return View(respuesta);
+    }
+
+    // POST: RESPUESTAS/Edit/5
+    // To protect from overposting attacks, enable the specific properties you want to bind to.
+    // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Edit(int? id, [Bind("Id,Detalle,PreguntaId,FechaRegistro")] Respuesta respuesta)
+    {
+        if (id != respuesta.Id)
+        {
+            return NotFound();
+        }
+
+        if (ModelState.IsValid)
+        {
+            try
+            {
+                _context.Update(respuesta);
+                await _context.SaveChangesAsync();
+
+                return RedirectToAction(nameof(Index));
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!RespuestaExists(respuesta.Id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+        }
+
+        return View(respuesta);
+    }
+
+    // GET: RESPUESTAS/Delete/5
+    public async Task<IActionResult> Delete(int? id)
+    {
+        if (id == null)
+        {
+            return NotFound();
+        }
+
+        var respuesta = await _context.Respuestas
+            .FirstOrDefaultAsync(m => m.Id == id);
+        if (respuesta == null)
+        {
+            return NotFound();
+        }
+
+        return View(respuesta);
+    }
+
+    // POST: RESPUESTAS/Delete/5
+    [HttpPost, ActionName("Delete")]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> DeleteConfirmed(int? id)
+    {
+        var respuesta = await _context.Respuestas.FindAsync(id);
+        if (respuesta != null)
+        {
+            _context.Respuestas.Remove(respuesta);
+        }
+
+        await _context.SaveChangesAsync();
+        return RedirectToAction(nameof(Index));
+    }
+
+    private bool RespuestaExists(int? id)
+    {
+        return _context.Respuestas.Any(e => e.Id == id);
     }
 }

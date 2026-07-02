@@ -1,15 +1,11 @@
-﻿namespace Web_Encuesta.Models
+﻿namespace Web_Encuesta.Models.Dto
 {
-    public class Respuesta
+    public class RespuestaDto
     {
         public int Id { get; set; }
-
         public string Detalle { get; set; }
-
         public int PreguntaId { get; set; }
-
-        public Pregunta? Pregunta { get; set; }
-
+        public string Pregunta { get; set; }
         public DateTime FechaRegistro { get; set; }
     }
 }
