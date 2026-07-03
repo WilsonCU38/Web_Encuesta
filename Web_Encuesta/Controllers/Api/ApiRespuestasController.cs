@@ -77,6 +77,7 @@ public class ApiRespuestasController : ControllerBase
 
         respuestaDb.Detalle = respuesta.Detalle;
         respuestaDb.PreguntaId = respuesta.PreguntaId;
+        respuestaDb.FechaRegistro = DateTime.Now;
 
         await _context.SaveChangesAsync();
 
